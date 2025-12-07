@@ -1,3 +1,5 @@
+from typing import Any, cast
+
 from langgraph.graph.state import StateGraph
 
 from chat_agh.agents.retrieval import (
@@ -43,6 +45,14 @@ class RetrievalAgent:
         )
 
     def query(self, query: str) -> str:
-        initial_state = RetrievalState(query=query)
-        result = self.graph.invoke(initial_state)
-        return result.get("summary").content  # type: ignore[no-any-return]
+        state: RetrievalState = {"query": query, "retrieved_context": []}
+        result = cast(dict[str, Any], self.graph.invoke(cast(Any, state)))
+        summary = result.get("summary")
+        if summary is None:
+            msg = "Retrieval graph result is missing the summary"
+            raise TypeError(msg)
+        content = getattr(summary, "content", None)
+        if not isinstance(content, str):
+            msg = "Retrieval graph summary is missing string content"
+            raise TypeError(msg)
+        return content

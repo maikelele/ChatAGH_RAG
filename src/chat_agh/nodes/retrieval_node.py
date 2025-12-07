@@ -1,10 +1,15 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Dict, List
 
-from chat_agh.agents.retrieval_agent import RetrievalAgent
+from chat_agh.agents import RetrievalAgent
 from chat_agh.states import ChatState
-from chat_agh.utils.agents_info import AgentDetails, AgentsInfo, RETRIEVAL_AGENTS
-from chat_agh.utils.utils import log_execution_time, logger
+from chat_agh.utils import (
+    RETRIEVAL_AGENTS,
+    AgentDetails,
+    AgentsInfo,
+    log_execution_time,
+    logger,
+)
 
 
 class RetrievalNode:

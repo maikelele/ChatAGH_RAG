@@ -124,4 +124,14 @@ RETRIEVAL_AGENTS = [
         - sylabusy.agh.edu.pl
         """,
     ),
+    # RetrievalAgentInfo(
+    #     name="dss_agent",
+    #     vector_store_index_name="dss",
+    #     description="""
+    #     Agent wyszukujący informacji z działu spraw studenckich AGH.
+    #     Informacje o procedurach administracyjnych, takich jak składanie wniosków o stypendia,
+    #      urlopy dziekańskie czy wydawanie zaświadczeń.
+    #       Dodatkowo często dostępne są wzory dokumentów, regulaminy studiów i informacje dotyczące akademików, pomocy materialnej czy szeroko pojętej działąlności uczelni.
+    #     """,
+    # ),
 ]

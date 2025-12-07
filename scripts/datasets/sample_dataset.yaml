@@ -1,0 +1,185 @@
+- question: W jakim roku powstala Akademia Gorniczo Hutnicza w Krakowie?
+  answer: AGH zostala powolana w 1919 roku.
+  evaluation_criteria:
+  - Wspomniano rok 1919.
+  - Jasno powiedziano, ze chodzi o zalozenie AGH.
+
+- question: Kto byl pierwszym rektorem Akademii Gorniczo Hutniczej?
+  answer: Pierwszym rektorem AGH byl profesor Antoni Hoborski.
+  evaluation_criteria:
+  - Padlo nazwisko Antoni Hoborski.
+  - Stwierdzono, ze byl pierwszym rektorem.
+
+- question: Ile wydzialow funkcjonuje obecnie w AGH?
+  answer: Obecnie AGH ma 16 wydzialow.
+  evaluation_criteria:
+  - Podano liczbe wydzialow.
+  - Liczba wynosi 16.
+
+- question: Jak nazywa sie glowny kampus AGH w Krakowie?
+  answer: Glowny kampus to Miasteczko Studenckie AGH.
+  evaluation_criteria:
+  - Wskazano nazwe kampusu.
+  - Nazwa to Miasteczko Studenckie AGH.
+
+- question: Na jakiej ulicy znajduje sie rektorat AGH?
+  answer: Rektorat miesci sie przy al. Mickiewicza 30 w Krakowie.
+  evaluation_criteria:
+  - Pojawia sie adres Mickiewicza 30.
+  - Wyjasniono, ze to siedziba rektoratu.
+
+- question: Jak nazywa sie biblioteka glowna AGH i gdzie sie znajduje?
+  answer: To Biblioteka Glowna AGH przy al. Mickiewicza 30.
+  evaluation_criteria:
+  - Podano nazwe Biblioteka Glowna AGH.
+  - Wspomniano lokalizacje przy al. Mickiewicza 30.
+
+- question: Jakie kolory znajduja sie w logotypie AGH?
+  answer: Logotyp zawiera barwy zielona, czarna i czerwona.
+  evaluation_criteria:
+  - Wymieniono wszystkie trzy kolory.
+  - Kolory to zielony, czarny, czerwony.
+
+- question: Jakie miejsce zajmuje AGH w programie Inicjatywa Doskonalosci Uczelnia Badawcza?
+  answer: AGH znajduje sie w gronie 10 uczelni z tytulem Uczelnia Badawcza.
+  evaluation_criteria:
+  - Padla informacja, ze uczelnia uczestniczy w IDUB.
+  - Wspomniano o grupie 10 uczelni.
+
+- question: Jak nazywa sie znany klub studencki na miasteczku AGH i jaka pelni funkcje?
+  answer: Klub Studio to popularny klub studencki organizujacy koncerty i wydarzenia.
+  evaluation_criteria:
+  - Wskazano nazwe Klub Studio.
+  - Opisano, ze organizuje imprezy kulturalne.
+
+- question: Ktory wydzial AGH odpowiada za kierunek informatyka i jakie inne obszary obejmuje?
+  answer: Informatyke prowadzi Wydzial Informatyki, Elektroniki i Telekomunikacji obejmujacy tez elektronike i telekomunikacje.
+  evaluation_criteria:
+  - Wskazano nazwe wydzialu.
+  - Wymieniono dodatkowe dyscypliny (elektronika/telekomunikacja).
+
+- question: Jak nazywa sie festiwal naukowy organizowany przez AGH i jaki ma charakter?
+  answer: Jest to Festiwal Nauki i Techniki prezentujacy eksperymenty dla studentow i mieszkancow.
+  evaluation_criteria:
+  - Podano nazwe festiwalu.
+  - Opisano, ze prezentuje naukowe pokazy dla spolecznosci.
+
+- question: Czym zajmuje sie zespol AGH Solar Boat?
+  answer: To studencki zespol budujacy lodzie napedzane energia sloneczna i startujacy w zawodach.
+  evaluation_criteria:
+  - Wspomniano, ze to zespol studencki AGH.
+  - Opisano tworzenie lodzi solarnych i udzial w zawodach.
+
+- question: Jakie muzeum dziala przy AGH i co prezentuje?
+  answer: Muzeum AGH im. Wladyslawa Zarneckiego prezentuje historie uczelni i dorobek jej wydzialow.
+  evaluation_criteria:
+  - Padla nazwa muzeum.
+  - Wspomniano o ekspozycji historii/dorobku AGH.
+
+- question: Jak nazywa sie akademik AGH przeznaczony glownie dla doktorantow i gdzie sie znajduje?
+  answer: DS Karlik to dom studencki dla doktorantow przy ul. Buszka na miasteczku.
+  evaluation_criteria:
+  - Wskazano nazwe DS Karlik.
+  - Podano, ze stoi na miasteczku (ul. Buszka) i sluzy doktorantom.
+
+- question: Kiedy AGH obchodzi Dzien Hutnika i co symbolizuje?
+  answer: Dzien Hutnika odbywa sie 4 maja i jest swietem tradycji uczelni.
+  evaluation_criteria:
+  - Data 4 maja.
+  - Wyjasnienie, ze to swieto AGH.
+
+- question: Jak brzmi motto AGH umieszczone na herbie i w jakim jest jezyku?
+  answer: Motto to Laboremus pro Patria w jezyku lacinskim.
+  evaluation_criteria:
+  - Podano tresc mott.
+  - Wskazano, ze jest po lacinsku.
+
+- question: Ktory wydzial AGH prowadzi kierunek geodezja i kartografia i jakie specjalnosci oferuje?
+  answer: Wydzial Geologii, Geofizyki i Ochrony Srodowiska prowadzi geodezje oferujac specjalnosci geoinformatyczne.
+  evaluation_criteria:
+  - Wymieniono wydzial.
+  - Wspomniano o specjalnosciach geodezyjno-geoinformatycznych.
+
+- question: Jak nazywa sie uczelniany program wsparcia startupow w AGH i kto moze w nim uczestniczyc?
+  answer: Inkubator Innowacyjnosci AGH wspiera projekty studentow i naukowcow uczelni.
+  evaluation_criteria:
+  - Padla nazwa programu.
+  - Okreslono, ze dedykowany jest studentom i naukowcom AGH.
+
+- question: Jaka linia tramwajowa kursuje obok kampusu AGH i gdzie zwykle zmierza?
+  answer: Linia 4 przejezdza obok AGH laczac Bronowice z Nowa Huta.
+  evaluation_criteria:
+  - Wskazano numer linii.
+  - Opisano podstawowa trase (Bronowice–Nowa Huta).
+
+- question: Jak nazywa sie glowne czasopismo naukowe AGH w dziedzinach gorniczych?
+  answer: To Journal of Mining and Geoengineering wydawany przez AGH.
+  evaluation_criteria:
+  - Padla nazwa czasopisma.
+  - Wspomniano, ze wydawca jest AGH i tematyka gorniczo-geoinzynierska.
+
+- question: W jakim budynku AGH znajduje sie Aula Glowna i jakie wydarzenia sie tam odbywaja?
+  answer: Aula Glowna miesci sie w budynku A-0 i gosci uroczystosci inauguracji oraz gale.
+  evaluation_criteria:
+  - Wskazano budynek A-0.
+  - Wymieniono typowe wydarzenia (inauguracje/gale).
+
+- question: Jak nazywa sie zespol piesni i tanca AGH i jaka promuje tradycje?
+  answer: Zespol Krakus promuje polski folklor taneczny.
+  evaluation_criteria:
+  - Nazwa Krakus.
+  - Informacja o promowaniu folkloru.
+
+- question: Jakie studenckie radio dziala na AGH i gdzie nadaje?
+  answer: Radio17 nadaje z miasteczka AGH w internecie.
+  evaluation_criteria:
+  - Nazwa Radio17.
+  - Wspomniano sposob nadawania i lokalizacje.
+
+- question: Czym zajmuje sie zespol AGH Racing i jakie sa jego osiagniecia?
+  answer: AGH Racing projektuje bolidy Formula Student zdobywajac nagrody na zawodach europejskich.
+  evaluation_criteria:
+  - Padla nazwa zespolu i dziedzina (bolidy FS).
+  - Wspomniano udzial w zawodach/osiagniecia.
+
+- question: Ktory wydzial AGH prowadzi kierunek metalurgia i czym sie specjalizuje?
+  answer: Wydzial Metali Niezaleznych prowadzi metalurgie koncentrujac sie na technologii metali kolorowych.
+  evaluation_criteria:
+  - Nazwa wydzialu.
+  - Zakres specjalizacji (metale niezalezne/kolorowe).
+
+- question: Jak nazywa sie program stypendialny AGH dla wybitnych maturzystow i na czym polega?
+  answer: Diamentowy Indeks AGH nagradza laureatow konkursu indeksami i stypendiami.
+  evaluation_criteria:
+  - Nazwa programu.
+  - Streszczono forme nagrody (indeks/stypendium).
+
+- question: Jak nazywa sie osrodek sportowy AGH z basenem i jakie zajecia oferuje?
+  answer: Centrum Rozwoju Fizycznego i Sportu AGH prowadzi zajecia na basenie i w hali sportowej.
+  evaluation_criteria:
+  - Nazwa CRFiS AGH.
+  - Wspomniano basen/hala i zajecia sportowe.
+
+- question: Kto jest patronem Wydzialu Energetyki i Paliw AGH i dlaczego?
+  answer: Patronem jest prof. Stanislaw Piotrowski, pionier polskiej energetyki.
+  evaluation_criteria:
+  - Nazwisko patrona.
+  - Wzmianka o jego dorobku w energetyce.
+
+- question: Jak nazywa sie platforma e-learningowa AGH i do czego sluzy?
+  answer: UPeL, czyli Uniwersytecka Platforma e-Learningowa, obsluguje kursy online AGH.
+  evaluation_criteria:
+  - Pelna nazwa i skrot UPeL.
+  - Opis funkcji (kursy online).
+
+- question: W jakiej dzielnicy Krakowa znajduje sie kampus AGH i jakie ulice go otaczaja?
+  answer: Kampus lezy w Krowodrzy, miedzy al. Mickiewicza, Reymonta i Czarnowiejska.
+  evaluation_criteria:
+  - Wspomniano dzielnice Krowodrza.
+  - Podano przyblizone ulice graniczne.
+
+- question: Jakie glowne formy wsparcia dla studentow oferuje Biuro Karier AGH?
+  answer: Biuro Karier AGH organizuje targi pracy i konsultacje doradcze dla studentow.
+  evaluation_criteria:
+  - Wskazano Biuro Karier AGH.
+  - Wymieniono przynajmniej dwie formy wsparcia (targi, konsultacje).

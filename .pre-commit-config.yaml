@@ -11,9 +11,18 @@ repos:
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.18.2
     hooks:
-      - id: mypy
-        args: [--strict, --ignore-missing-imports]
-        additional_dependencies:
+    - id: mypy
+      name: mypy (strict src/)
+      args: [--strict, --ignore-missing-imports]
+      files: ^src/
+      additional_dependencies:
+        - python-dotenv
+        - langchain-core
+    - id: mypy
+      name: mypy (non-strict scripts/)
+      args: [--ignore-missing-imports]
+      files: ^scripts/
+      additional_dependencies:
         - python-dotenv
         - langchain-core
 -   repo: https://github.com/astral-sh/ruff-pre-commit

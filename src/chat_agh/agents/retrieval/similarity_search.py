@@ -6,12 +6,7 @@ from pymongo.collection import Collection
 
 from chat_agh.agents.retrieval.utils import aggregate_by_url
 from chat_agh.states import RetrievalState
-from chat_agh.utils.utils import (
-    MONGO_DATABASE_NAME,
-    log_execution_time,
-    logger,
-    mongo_client,
-)
+from chat_agh.utils import MONGO_DATABASE_NAME, log_execution_time, logger, mongo_client
 from chat_agh.vector_store.mongodb import MongoDBVectorStore
 
 
@@ -29,7 +24,7 @@ class SimilaritySearch:
     @log_execution_time
     def __call__(self, state: RetrievalState) -> Dict[str, Dict[str, list[Document]]]:
         retrieved_chunks = self.vector_store.search(
-            state["query"], k=self.num_retrieved_chunks
+            state["query"], final_limit=self.num_retrieved_chunks
         )
 
         aggregated_docs = aggregate_by_url(retrieved_chunks)
