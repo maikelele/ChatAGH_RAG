@@ -3,7 +3,7 @@ import os
 from collections.abc import Generator
 from typing import Any, Dict, List, Optional, Union
 
-from langchain.schema import AIMessage, BaseMessage, HumanMessage
+from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
 from langchain_core.documents import Document
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import PromptTemplate
