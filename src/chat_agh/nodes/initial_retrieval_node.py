@@ -5,8 +5,8 @@ from typing import cast
 from langchain_core.documents import Document
 
 from chat_agh.states import ChatState
+from chat_agh.utils import log_execution_time, logger
 from chat_agh.vector_store.mongodb import MongoDBVectorStore
-from chat_agh.utils.utils import log_execution_time, logger
 
 
 class InitialRetrievalNode:
@@ -30,7 +30,7 @@ class InitialRetrievalNode:
                 results = list(
                     chain.from_iterable(
                         executor.map(
-                            lambda vs: vs.search(chat_history_text, k=self.k),
+                            lambda vs: vs.search(chat_history_text, final_limit=self.k),
                             self.vector_stores,
                         )
                     )
@@ -39,7 +39,7 @@ class InitialRetrievalNode:
             logger.info(
                 f"Found {len(results)} chunks in"
                 f" {len(self.vector_stores)} collections,"
-                f" rerenaking to: {len(final_result)}"
+                f" reranked to: {len(final_result)}"
             )
 
             return {"context": final_result}

@@ -8,8 +8,8 @@ from chat_agh.states import RetrievalState
 from chat_agh.utils.utils import (
     log_execution_time,
     retry_on_exception,
-    RetrievedContext,
 )
+from chat_agh.utils.retrieved_context import RetrievedContext
 from chat_agh.utils.model_inference import OpenAIModelInference
 
 

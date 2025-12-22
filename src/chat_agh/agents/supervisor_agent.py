@@ -3,7 +3,7 @@ import os
 from collections.abc import Generator
 from typing import Any, Dict, List, Optional, Union
 
-from langchain_core.messages import BaseMessage
+from langchain.schema import AIMessage, BaseMessage, HumanMessage
 from langchain_core.documents import Document
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import PromptTemplate
@@ -102,15 +102,6 @@ class SupervisorAgent:
 
 
 if __name__ == "__main__":
-    from dotenv import load_dotenv
-
-    load_dotenv("/.env")
-
-    from langchain.schema import AIMessage, HumanMessage
-
-    from chat_agh.utils.chat_history import ChatHistory
-    from chat_agh.utils.chat_history import ChatHistory
-
     agent = SupervisorAgent()
     res = agent.invoke(
         agents_info=AgentsInfo(

@@ -11,8 +11,8 @@ from chat_agh.utils.utils import (
     log_execution_time,
     logger,
     mongo_client,
-    RetrievedContext,
 )
+from chat_agh.utils.retrieved_context import RetrievedContext
 from chat_agh.vector_store.mongodb import MongoDBVectorStore
 
 
@@ -32,7 +32,7 @@ class SimilaritySearch:
         self, state: RetrievalState
     ) -> Dict[str, Dict[str, list[Document]] | list[RetrievedContext]]:
         retrieved_chunks = self.vector_store.search(
-            state["query"], k=self.num_retrieved_chunks
+            state["query"], final_limit=self.num_retrieved_chunks
         )
 
         aggregated_docs = aggregate_by_url(retrieved_chunks)

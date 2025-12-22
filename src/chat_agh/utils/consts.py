@@ -1,0 +1,2 @@
+MONGO_DATABASE_NAME = "chat_agh"
+DEFAULT_SUPERVISOR_MODEL = "gemini-2.5-flash"

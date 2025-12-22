@@ -49,7 +49,7 @@ class RetrievalAgent:
         )
 
     def query(self, query: str) -> Any:
-        initial_state = RetrievalState(query=query)
+        initial_state = RetrievalState(query=query, retrieved_context=[])
         result = self.graph.invoke(initial_state)
 
         if summary := result.get("summary"):

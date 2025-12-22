@@ -9,11 +9,11 @@ def task_doit() -> dict[str, Any]:
     return {
         "actions": [
             # 1. Type checking
-            "poetry run mypy .",
+            "poetry run mypy scripts/ src/",
             # 2. Code linting
-            "poetry run ruff check .",
+            "poetry run ruff check scripts/ src/",
             # 3. Formatting files
-            "poetry run ruff check . --fix",
+            "poetry run ruff check scripts/ src/ --fix",
         ],
         "verbosity": 2,
     }
