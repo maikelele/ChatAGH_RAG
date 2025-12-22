@@ -110,6 +110,6 @@ if __name__ == "__main__":
 
     logger.info("END")
 
-    from chat_agh.utils.model_inference import GoogleGenAIModelInference
+    from chat_agh.utils.model_inference import OpenAIModelInference
 
-    print(GoogleGenAIModelInference().get_usage())
+    print(OpenAIModelInference().get_usage())

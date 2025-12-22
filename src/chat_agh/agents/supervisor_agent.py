@@ -13,7 +13,7 @@ from pydantic import BaseModel, model_validator
 from chat_agh.prompts import SUPERVISOR_AGENT_PROMPT_TEMPLATE
 from chat_agh.utils.agents_info import RETRIEVAL_AGENTS, AgentDetails, AgentsInfo
 from chat_agh.utils.chat_history import ChatHistory
-from chat_agh.utils.model_inference import GoogleGenAIModelInference
+from chat_agh.utils.model_inference import OpenAIModelInference
 
 
 class SupervisorOutput(BaseModel):
@@ -60,7 +60,7 @@ class SupervisorAgent:
     def __init__(self) -> None:
         super().__init__()
         self.api_keys = json.loads(os.getenv("GEMINI_API_KEYS", "[]"))
-        self.llm = GoogleGenAIModelInference()
+        self.llm = OpenAIModelInference()
 
         self.output_parser = PydanticOutputParser(pydantic_object=SupervisorOutput)
         self.prompt = PromptTemplate(
@@ -135,4 +135,4 @@ if __name__ == "__main__":
     )
     print(res)
 
-    GoogleGenAIModelInference().get_usage()
+    OpenAIModelInference().get_usage()

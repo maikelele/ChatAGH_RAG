@@ -20,7 +20,7 @@ class RetrievalAgent:
         num_retrieved_chunks: int = 5,
         num_context_chunks: int = 3,
         window_size: int = 0,
-        graph_augmentation: bool = True,
+        graph_augmentation: bool = False,
     ) -> None:
         self.name = agent_name
         self.index_name = index_name

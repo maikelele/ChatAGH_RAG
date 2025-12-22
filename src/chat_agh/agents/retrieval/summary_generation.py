@@ -10,12 +10,12 @@ from chat_agh.utils.utils import (
     retry_on_exception,
     RetrievedContext,
 )
-from chat_agh.utils.model_inference import GoogleGenAIModelInference
+from chat_agh.utils.model_inference import OpenAIModelInference
 
 
 class SummaryGeneration:
     def __init__(self) -> None:
-        self.llm = GoogleGenAIModelInference()
+        self.llm = OpenAIModelInference()
         self.prompt = PromptTemplate(
             input_variables=["context", "query"],
             template=SUMMARY_GENERATION_PROMPT_TEMPLATE,
