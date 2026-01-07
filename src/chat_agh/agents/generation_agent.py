@@ -7,8 +7,6 @@ from langchain_core.runnables import Runnable
 from chat_agh.prompts import GENERATION_PROMPT_TEMPLATE
 from chat_agh.utils.model_inference import GoogleGenAIModelInference
 
-DEFAULT_GENERATION_MODEL = "gemini-2.5-flash"
-
 
 class GenerationAgent:
     def __init__(self) -> None:

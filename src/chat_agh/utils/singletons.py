@@ -1,20 +1,21 @@
 import logging
 import os
+from typing import Any
 
 from dotenv import load_dotenv
 from pymongo import MongoClient
 from sentence_transformers import SentenceTransformer
 
+from chat_agh.utils.consts import EMBEDDINGS_MODEL, MODELS_WITH_RPM
+
 load_dotenv()
 
-mongo_client: MongoClient = MongoClient(
+mongo_client: MongoClient[Any] = MongoClient(
     os.environ["MONGODB_URI"], tlsAllowInvalidCertificates=True
 )
 
-# Force the embedding model to run on CPU so that any limited GPU memory
-# can be fully utilized by Ollama during local experiments.
-embedding_model: SentenceTransformer = SentenceTransformer(
-    "intfloat/multilingual-e5-large",
+embedding_model = SentenceTransformer(
+    EMBEDDINGS_MODEL,
     device="cpu",
 )
 
@@ -28,3 +29,5 @@ if not logger.handlers:
     )
     handler.setFormatter(formatter)
     logger.addHandler(handler)
+
+model_draw_counts: dict[str, int] = {name: 0 for name in list(MODELS_WITH_RPM.keys())}

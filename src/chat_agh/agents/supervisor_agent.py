@@ -1,10 +1,8 @@
-import json
-import os
 from collections.abc import Generator
 from typing import Any, Dict, List, Optional, Union
 
-from langchain.schema import AIMessage, BaseMessage, HumanMessage
 from langchain_core.documents import Document
+from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import Runnable
@@ -59,7 +57,6 @@ class SupervisorOutput(BaseModel):
 class SupervisorAgent:
     def __init__(self) -> None:
         super().__init__()
-        self.api_keys = json.loads(os.getenv("GEMINI_API_KEYS", "[]"))
         self.llm = GoogleGenAIModelInference()
 
         self.output_parser = PydanticOutputParser(pydantic_object=SupervisorOutput)

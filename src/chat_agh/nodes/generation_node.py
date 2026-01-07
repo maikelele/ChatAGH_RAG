@@ -1,8 +1,9 @@
-from typing import Dict, List, Any, Iterator, Optional
+from typing import Any, Dict, Iterator, List, Optional
+
 from langchain_core.documents import Document
 from langchain_core.runnables import RunnableConfig
-from langgraph.types import StreamWriter
 from langgraph.config import get_stream_writer
+from langgraph.types import StreamWriter
 
 from chat_agh.agents import GenerationAgent
 from chat_agh.states import ChatState

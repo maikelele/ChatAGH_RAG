@@ -12,15 +12,13 @@ repos:
     rev: v1.18.2
     hooks:
     - id: mypy
-      name: mypy (strict src/)
-      args: [--strict, --ignore-missing-imports]
+      name: mypy (src/)
       files: ^src/
       additional_dependencies:
         - python-dotenv
         - langchain-core
     - id: mypy
-      name: mypy (non-strict scripts/)
-      args: [--ignore-missing-imports]
+      name: mypy (scripts/)
       files: ^scripts/
       additional_dependencies:
         - python-dotenv

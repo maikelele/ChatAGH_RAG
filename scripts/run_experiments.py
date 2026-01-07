@@ -1,18 +1,17 @@
 from hashlib import shake_256
 from pathlib import Path
+from typing import Literal
 
 import opik
 import pandas as pd
-import yaml  # type: ignore[import-untyped]
+import yaml  # type: ignore[import-untyped, unused-ignore]
 from dotenv import load_dotenv
 from opik import Opik
 from opik.rest_api.core import ApiError
 
-from chat_agh.utils.utils import logger
+from chat_agh.utils.singletons import logger
 from scripts.consts import (
     DATASET_NAME,
-    EMBEDDINGS_MODEL,
-    EVALUATION_MODEL,
     PROJECT_NAME,
 )
 from scripts.evaluation_tasks.base import SearchParametersOverride
@@ -60,6 +59,22 @@ def _prepare_opik_dataset(client: Opik, dataset_name: str) -> str:
     return opik_dataset_name
 
 
+def get_model_source() -> Literal["remote", "local"]:
+    model_source: str = input("Model source (r - remote / l - local): ")
+    if not model_source:
+        raise ValueError("model_source must not be empty")
+    return normalize(model_source)
+
+
+def normalize(model_source: str) -> Literal["remote", "local"]:
+    if model_source.lower()[0] == "r":
+        return "remote"
+    elif model_source.lower()[0] == "l":
+        return "local"
+    else:
+        raise ValueError("model_source can be either 'remote' or 'local'")
+
+
 if __name__ == "__main__":
     load_dotenv()
 
@@ -67,41 +82,28 @@ if __name__ == "__main__":
     dataset_name = _prepare_opik_dataset(client, DATASET_NAME)
     dataset_file_path = Path(__file__).parent / "datasets" / f"{DATASET_NAME}.yaml"
 
+    model_source = get_model_source()
+
     runner = ExperimentRunner(
         client=client,
         dataset_name=dataset_name,
         project_name=PROJECT_NAME,
-        ragas_evaluator_model_name=EVALUATION_MODEL,
-        criteria_evaluator_model_name=EVALUATION_MODEL,
-        evaluator_embeddings_model_name=EMBEDDINGS_MODEL,
+        model_source=model_source,
         dataset_path=dataset_file_path,
     )
 
-    lexical_limit_vals = [5, 10, 15]
-    fuzzy_max_edits = [1, 2]
-    fuzzy_prefix_lengths = [0, 1, 2]
-
-    vector_search_settings = []
-
-    for lexical_limit in lexical_limit_vals:
-        for fuzzy_max_edit in fuzzy_max_edits:
-            for fuzzy_prefix_length in fuzzy_prefix_lengths:
-                vector_search_settings.append(
-                    SearchParametersOverride(
-                        mode="lexical",
-                        lexical_limit=lexical_limit,
-                        fuzzy_max_edit=fuzzy_max_edit,
-                        fuzzy_prefix_length=fuzzy_prefix_length,
-                    )
-                )
-    vector_search_settings.extend(
-        [
-            SearchParametersOverride(
-                mode="lexical", lexical_limit=lexical_limit, fuzzy=False
-            )
-            for lexical_limit in lexical_limit_vals
-        ]
-    )
+    vector_search_settings: list[SearchParametersOverride] = [
+        SearchParametersOverride(
+            mode="lexical",
+            fuzzy=False,
+            lexical_limit=10,
+        ),
+        SearchParametersOverride(
+            mode="lexical",
+            fuzzy=False,
+            lexical_limit=15,
+        ),
+    ]
 
     tasks = [
         VectorSearchEvaluationTask(

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
-from opik import Prompt, track
+from opik import track
 
 from chat_agh.agents import GenerationAgent
-from chat_agh.utils.utils import logger
+from chat_agh.utils.singletons import logger
 from chat_agh.vector_store.mongodb import MongoDBVectorStore
 from scripts.evaluation_tasks.base import CurrentSearchParameters
 
@@ -18,16 +18,10 @@ class VectorSearchEvaluationTask:
         *,
         collection_names: list[str],
         search_setting: CurrentSearchParameters,
-        prompts: Optional[dict[str, str]] = None,
         distance_metric: str = "cosine",
         vector_index_name: str = "vector_index",
         search_index_name: str = "default",
     ) -> None:
-        prompts_mapping = prompts or {}
-        self.prompts = [
-            Prompt(name=prompt_name, prompt=prompt_template)
-            for prompt_name, prompt_template in prompts_mapping.items()
-        ]
         self._collection_names = collection_names
         self._search_setting = search_setting
         self._distance_metric = distance_metric
