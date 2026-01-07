@@ -30,7 +30,7 @@ class InitialRetrievalNode:
                 results = list(
                     chain.from_iterable(
                         executor.map(
-                            lambda vs: vs.search(chat_history_text, k=self.k),
+                            lambda vs: vs.search(chat_history_text, final_limit=self.k),
                             self.vector_stores,
                         )
                     )

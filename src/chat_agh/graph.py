@@ -2,7 +2,11 @@ from collections.abc import Generator
 from typing import Any, cast
 
 from langchain_core.messages import HumanMessage
-from langgraph.graph.state import END, START, StateGraph
+from langgraph.graph.state import (  # type: ignore[attr-defined, unused-ignore]
+    END,
+    START,
+    StateGraph,
+)
 
 from chat_agh.nodes import (
     GenerationNode,
@@ -87,7 +91,8 @@ class ChatGraph:
         }
         invoke_config = {} if config is None else config
         result = cast(
-            dict[str, Any], self.graph.invoke(cast(Any, state), config=invoke_config)
+            dict[str, Any],
+            self.graph.invoke(cast(Any, state), config=invoke_config),  # type: ignore[arg-type, unused-ignore]
         )
         return result
 

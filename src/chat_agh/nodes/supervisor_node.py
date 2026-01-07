@@ -1,12 +1,13 @@
 from typing import Dict, Optional
 
 from langchain_core.messages import AIMessage
-from langgraph.types import StreamWriter
 from langgraph.config import get_stream_writer
+from langgraph.types import StreamWriter
 
 from chat_agh.agents import SupervisorAgent
 from chat_agh.states import ChatState
-from chat_agh.utils.utils import log_execution_time, logger, retry_on_exception
+from chat_agh.utils.singletons import logger
+from chat_agh.utils.utils import log_execution_time, retry_on_exception
 
 
 class SupervisorNode:
